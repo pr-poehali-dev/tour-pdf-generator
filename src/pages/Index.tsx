@@ -13,6 +13,10 @@ const days = [
       'Завершим этот день совместным ужином, знакомством участников и первым погружением в атмосферу Китая. Гуанчжоу по праву считается гастрономической столицей южного Китая, поэтому уже в первый вечер вы познакомитесь с традиционной кантонской кухней: димсамы, утка по-кантонски, свежие морепродукты и настоящий китайский чай.',
       'Тем, кто прилетает заранее, мы рекомендуем посетить знаменитый Зоопарк Гуанчжоу — один из крупнейших в Китае, где можно увидеть панд, тигров, слонов и множество редких животных со всего мира.',
     ],
+    photos: [
+      { url: 'https://cdn.poehali.dev/projects/132af4a1-1d35-496f-aa2c-896dd04613bb/files/7dfd17cf-4efe-4512-9617-089dd5116c87.jpg', caption: 'Кантонская башня ночью' },
+      { url: 'https://cdn.poehali.dev/projects/132af4a1-1d35-496f-aa2c-896dd04613bb/files/51556cbb-b3cd-4ec0-b6be-069dea9f243b.jpg', caption: 'Кантонская кухня — димсамы' },
+    ],
   },
   {
     d: '02',
@@ -22,6 +26,10 @@ const days = [
       'Дорога займёт около двух часов и станет прекрасной возможностью увидеть красивейшие пейзажи южного Китая и его уютные деревушки. По прибытии нас ждёт прогулка по колоритным улочкам Яншо, где царит особая атмосфера.',
       'Настоящей магией дня станет сплав на традиционных бамбуковых плотах по легендарной реке Ли. Вокруг возвышаются карстовые горы, отражающиеся в спокойной глади воды, — это возможность на несколько часов оказаться в настоящей китайской сказке.',
       'Вечером мы отправимся на старинную улицу West Street — самое знаменитое туристическое место в Яншо: яркие огни, уютные кафе, сувенирные лавки, живая музыка. Вы попробуете знаменитую китайскую уличную еду, местные деликатесы и свежие фрукты — идеальное завершение дня.',
+    ],
+    photos: [
+      { url: 'https://cdn.poehali.dev/projects/132af4a1-1d35-496f-aa2c-896dd04613bb/files/f438dd93-122a-4c62-a207-df46223125a7.jpg', caption: 'Сплав по реке Ли' },
+      { url: 'https://cdn.poehali.dev/projects/132af4a1-1d35-496f-aa2c-896dd04613bb/files/44ae07c2-c85d-4d2a-b64d-0854f1301184.jpg', caption: 'West Street вечером' },
     ],
   },
   {
@@ -34,6 +42,10 @@ const days = [
       'Затем — прогулка по прозрачному стеклянному мосту. Под ногами головокружительная высота, вокруг бескрайние горы и долины невероятной красоты.',
       'Вечером по желанию вы сможете отправиться на знаменитое шоу Impression Liu Sanjie — одно из самых красивых культурных представлений Китая. Сценой становится сама река Ли, а декорациями — карстовые горы, подсвеченные огнями. Шоу создано режиссёром церемонии открытия Олимпийских игр в Пекине.',
     ],
+    photos: [
+      { url: 'https://cdn.poehali.dev/projects/132af4a1-1d35-496f-aa2c-896dd04613bb/files/2d8fcf1b-41c9-4601-baca-909f6f6a2960.jpg', caption: 'Прогулка вдоль реки Юйлун' },
+      { url: 'https://cdn.poehali.dev/projects/132af4a1-1d35-496f-aa2c-896dd04613bb/files/25f9dd31-5bcd-432f-b4fd-4dbaf4df9f11.jpg', caption: 'Стеклянный мост над ущельем' },
+    ],
   },
   {
     d: '04',
@@ -44,6 +56,9 @@ const days = [
       'Далее мы отправимся в древний город Синпин — уютный и колоритный уголок с узкими улочками, старинными домами и красными фонарями. Именно здесь находится знаменитый пейзаж, изображённый на купюре в 20 юаней — одно из самых узнаваемых мест страны.',
       'После прогулки и обеда нас ждёт переезд на скоростном поезде в Чжанцзяцзе. Дорога займёт около 6–7 часов — можно отдохнуть, пересмотреть фотографии и насладиться меняющимися пейзажами за окном. Поздним вечером прибытие в отель.',
     ],
+    photos: [
+      { url: 'https://cdn.poehali.dev/projects/132af4a1-1d35-496f-aa2c-896dd04613bb/files/c6b5313b-6198-4652-86b6-587de2ae98d1.jpg', caption: 'Синпин — пейзаж с купюры 20 юаней' },
+    ],
   },
   {
     d: '05',
@@ -52,6 +67,10 @@ const days = [
       'Сегодня нас ждёт настоящее путешествие в мир фантастических пейзажей — посещение Национального лесного парка Чжанцзяцзе, более известного как «горы Аватара».',
       'Среди густых лесов здесь возвышаются тысячи гигантских каменных скал, окутанных облаками и туманом. Пейзажи выглядят настолько необычно, что кажется, будто вы оказались на другой планете. Именно эти горы стали вдохновением для знаменитых летающих островов в фильме «Аватар».',
       'В этот день мы: поднимемся на лучшие смотровые площадки с невероятными панорамными видами; увидим знаменитые каменные столбы — символ региона; прокатимся по канатным дорогам над ущельями и горными вершинами; поднимемся на легендарном стеклянном лифте Bailong Elevator — самом высоком внешнем лифте в мире; прогуляемся по живописным маршрутам среди облаков и посетим самые атмосферные фотолокации парка.',
+    ],
+    photos: [
+      { url: 'https://cdn.poehali.dev/projects/132af4a1-1d35-496f-aa2c-896dd04613bb/files/0d9ad5aa-3a12-4322-b94e-44aea8fffc08.jpg', caption: 'Горы Аватара в облаках' },
+      { url: 'https://cdn.poehali.dev/projects/132af4a1-1d35-496f-aa2c-896dd04613bb/files/9d5919cd-be4e-46bc-b4af-04fabae46445.jpg', caption: 'Лифт Bailong Elevator' },
     ],
   },
   {
@@ -63,6 +82,10 @@ const days = [
       'После прогулки над каньоном нас ждёт Пещера Жёлтого Дракона — одна из крупнейших карстовых пещер Азии. Это настоящий подземный лабиринт: 13 огромных залов, 96 галерей, подземная река с прогулкой на лодке, впечатляющие сталактиты и сталагмиты, подземные водопады высотой до 50 метров.',
       'Пещера поражает масштабами и разнообразием природных структур. Мягкая художественная подсветка усиливает ощущение сказочного подземного мира. Этот день подарит сразу два совершенно разных впечатления: сначала — чувство полёта над бездной, затем — путешествие в таинственный магический подземный мир.',
     ],
+    photos: [
+      { url: 'https://cdn.poehali.dev/projects/132af4a1-1d35-496f-aa2c-896dd04613bb/files/421ef0ff-c9a3-47f1-93b3-d86f7357d428.jpg', caption: 'Стеклянный мост над каньоном' },
+      { url: 'https://cdn.poehali.dev/projects/132af4a1-1d35-496f-aa2c-896dd04613bb/files/4ab55ac4-0b90-4eb9-b2b6-dd9e50a06fce.jpg', caption: 'Пещера Жёлтого Дракона' },
+    ],
   },
   {
     d: '07',
@@ -73,6 +96,11 @@ const days = [
       'Вас ждут прогулки по стеклянным тропам вдоль отвесных скал и панорамные виды, входящие в число самых впечатляющих в Китае.',
       'Вечером отправимся в удивительный древний городок Фуронг — место, словно сошедшее со страниц восточной сказки. Старый город расположен прямо у большого водопада, а вечером превращается в настоящее волшебство. Заключительный ужин с видом на водопад станет красивым завершением путешествия.',
     ],
+    photos: [
+      { url: 'https://cdn.poehali.dev/projects/132af4a1-1d35-496f-aa2c-896dd04613bb/files/d10d2ff4-c97d-4c4a-a8a2-bd7ef37f8e28.jpg', caption: 'Канатная дорога Тяньмэньшань' },
+      { url: 'https://cdn.poehali.dev/projects/132af4a1-1d35-496f-aa2c-896dd04613bb/files/61892bc2-28f2-4ccc-8b25-19fbc4144cd9.jpg', caption: 'Небесные врата — 999 ступеней' },
+      { url: 'https://cdn.poehali.dev/projects/132af4a1-1d35-496f-aa2c-896dd04613bb/files/5e56b7a0-eee4-4b28-a89d-06df4e53f83b.jpg', caption: 'Древний Фуронг у водопада' },
+    ],
   },
   {
     d: '08',
@@ -82,6 +110,7 @@ const days = [
       'Позади остаются древние деревушки, фантастические горы Аватара, романтичный Фуронг и живописные пейзажи Гуйлиня и Яншо. За эти дни вы увидели Китай во всём его разнообразии — от тысячелетней истории до природных чудес.',
       'По желанию вы можете также полететь в Пекин, Шанхай или Гуанчжоу на шопинг. Мы не прощаемся, а говорим: до новых встреч!',
     ],
+    photos: [],
   },
 ];
 
@@ -219,21 +248,38 @@ const Index = () => {
       <section className="px-6 md:px-16 py-24 bg-sand/40 print-page">
         <div className="max-w-5xl mx-auto">
           <SectionTitle kicker="День за днём" title="Подробный маршрут" />
-          <div className="space-y-4">
+          <div className="space-y-6">
             {days.map((day) => (
-              <div key={day.d} className="bg-card rounded-3xl p-8 shadow-sm border border-sand flex flex-col md:flex-row gap-6">
-                <div className="font-display text-6xl font-semibold text-coral/30 leading-none shrink-0">{day.d}</div>
-                <div className="flex-1">
-                  <h3 className="font-display text-3xl font-semibold mb-4 flex items-center gap-3">
-                    <Icon name="MapPin" size={22} className="text-ocean shrink-0" />
-                    {day.title}
-                  </h3>
-                  <div className="space-y-4">
-                    {day.text.map((p, i) => (
-                      <p key={i} className="text-ink/75 leading-relaxed">{p}</p>
+              <div key={day.d} className="bg-card rounded-3xl overflow-hidden shadow-sm border border-sand">
+                {/* Day header */}
+                <div className="flex items-center gap-4 px-8 pt-8 pb-4">
+                  <div className="w-16 h-16 rounded-2xl bg-coral flex items-center justify-center shrink-0">
+                    <span className="font-display text-2xl font-semibold text-background">{day.d}</span>
+                  </div>
+                  <h3 className="font-display text-2xl md:text-3xl font-semibold">{day.title}</h3>
+                </div>
+                {/* Day text */}
+                <div className="px-8 pb-6 space-y-3">
+                  {day.text.map((p, i) => (
+                    <p key={i} className="text-ink/75 leading-relaxed">{p}</p>
+                  ))}
+                </div>
+                {/* Photos grid */}
+                {day.photos.length > 0 && (
+                  <div className={`grid gap-1 ${day.photos.length === 1 ? 'grid-cols-1' : day.photos.length === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
+                    {day.photos.map((photo, i) => (
+                      <div key={i} className="relative group overflow-hidden aspect-[4/3]">
+                        <img
+                          src={photo.url}
+                          alt={photo.caption}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <span className="absolute bottom-3 left-3 text-background text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">{photo.caption}</span>
+                      </div>
                     ))}
                   </div>
-                </div>
+                )}
               </div>
             ))}
           </div>
