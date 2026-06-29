@@ -97,13 +97,22 @@ const meals = [
 ];
 
 const tariffs = [
-  { name: 'Комфорт', price: '89 000', per: '₽ / чел', items: ['Отели 4★', 'Групповые экскурсии', 'Завтраки'], hot: false },
-  { name: 'Премиум', price: '139 000', per: '₽ / чел', items: ['Отели 5★', 'Все экскурсии', 'Полный пансион', 'Личный гид'], hot: true },
-  { name: 'Люкс', price: '219 000', per: '₽ / чел', items: ['Сьюты 5★', 'Индивидуальный маршрут', 'Полный пансион', 'Трансфер на лимузине'], hot: false },
+  { name: 'Стоимость тура', price: '14 900', per: '¥ / чел', items: ['Проживание в отелях', 'Завтраки (шведский стол)', 'Все экскурсии по программе', 'Групповой трансфер', 'Гид и организатор'], hot: true },
 ];
 
-const included = ['Проживание 4 ночи', 'Питание по программе', 'Все экскурсии', 'Трансферы', 'Страховка', 'Услуги гида'];
-const excluded = ['Авиабилеты', 'Личные расходы', 'Доп. экскурсии', 'Чаевые'];
+const included = [
+  'Проживание в комфортных проверенных отелях (двухместное размещение, завтраки)',
+  'Завтраки по системе «шведский стол»',
+  'Групповой трансфер аэропорт–отель–аэропорт',
+  'Все экскурсии по программе',
+  'Гид и организатор',
+];
+const excluded = [
+  'Авиабилеты из Москвы в Гуанчжоу и обратно',
+  'Страховка для выезда за рубеж',
+  'Обеды и ужины (средняя стоимость ~10–20 $ за приём пищи)',
+  'Любые изменения программы или расходы, не описанные в разделе «Включено»',
+];
 
 const gallery = [
   'Sunlit turquoise mountain lake, alpine landscape, golden hour',
@@ -120,11 +129,19 @@ const reviews = [
   { name: 'Мария Власова', text: 'Прогулка на катере и закат — самый романтичный момент. Спасибо за организацию!', rate: 5, place: 'об озёрной одиссее' },
 ];
 
-const dates = [
-  { range: '12 – 16 июля', seats: 'Осталось 4 места', open: true },
-  { range: '02 – 06 августа', seats: 'Осталось 9 мест', open: true },
-  { range: '23 – 27 августа', seats: 'Мест нет', open: false },
-  { range: '13 – 17 сентября', seats: 'Открыта запись', open: true },
+const dateGroups = [
+  {
+    month: 'Сентябрь',
+    dates: ['6 – 13', '13 – 20', '20 – 27'],
+  },
+  {
+    month: 'Октябрь',
+    dates: ['4 – 11', '11 – 18', '18 – 25', '25 – 1¹'],
+  },
+  {
+    month: 'Ноябрь',
+    dates: ['1 – 8¹'],
+  },
 ];
 
 const Stars = ({ n }: { n: number }) => (
@@ -275,24 +292,20 @@ const Index = () => {
 
       <section className="px-6 md:px-16 py-24 bg-sand/40 print-page">
         <div className="max-w-6xl mx-auto">
-          <SectionTitle kicker="Стоимость" title="Тарифы тура" />
-          <div className="grid md:grid-cols-3 gap-6">
+          <SectionTitle kicker="Стоимость" title="Цена тура" />
+          <div className="flex justify-center">
             {tariffs.map((t) => (
-              <div
-                key={t.name}
-                className={`rounded-3xl p-8 border shadow-sm ${t.hot ? 'bg-ink text-background border-ink scale-105' : 'bg-card border-sand'}`}
-              >
-                {t.hot && <span className="inline-block bg-sunset text-ink text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">Хит продаж</span>}
+              <div key={t.name} className="rounded-3xl p-10 border shadow-sm bg-ink text-background border-ink max-w-lg w-full">
                 <h3 className="font-display text-3xl font-semibold">{t.name}</h3>
-                <div className="mt-4 mb-6">
-                  <span className="font-display text-5xl font-semibold">{t.price}</span>
-                  <span className={`ml-2 ${t.hot ? 'text-background/70' : 'text-muted-foreground'}`}>{t.per}</span>
+                <div className="mt-4 mb-6 flex items-end gap-3">
+                  <span className="font-display text-6xl font-semibold">{t.price}</span>
+                  <span className="text-background/70 text-xl mb-1">{t.per}</span>
                 </div>
                 <div className="space-y-3">
                   {t.items.map((it) => (
                     <div key={it} className="flex items-center gap-3">
-                      <Icon name="Check" size={18} className={t.hot ? 'text-sunset' : 'text-ocean'} />
-                      <span className={t.hot ? 'text-background/90' : 'text-ink/80'}>{it}</span>
+                      <Icon name="Check" size={18} className="text-sunset" />
+                      <span className="text-background/90">{it}</span>
                     </div>
                   ))}
                 </div>
@@ -350,33 +363,37 @@ const Index = () => {
 
       <section className="px-6 md:px-16 py-24 bg-sand/40 print-page">
         <div className="max-w-4xl mx-auto">
-          <SectionTitle kicker="Расписание" title="Ближайшие даты" />
-          <div className="space-y-3">
-            {dates.map((d) => (
-              <div
-                key={d.range}
-                className={`bg-card rounded-2xl p-6 flex items-center justify-between border border-sand ${d.open ? '' : 'opacity-60'}`}
-              >
-                <div className="flex items-center gap-4">
-                  <Icon name="CalendarDays" size={24} className="text-coral" />
-                  <span className="font-display text-2xl font-semibold">{d.range}</span>
+          <SectionTitle kicker="Расписание" title="Даты путешествий 2026" />
+          <div className="space-y-8">
+            {dateGroups.map((group) => (
+              <div key={group.month}>
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="text-coral font-semibold uppercase tracking-[0.2em] text-sm">{group.month}</span>
+                  <div className="flex-1 h-px bg-coral/30" />
                 </div>
-                <span className={`text-sm font-semibold ${d.open ? 'text-ocean' : 'text-muted-foreground'}`}>{d.seats}</span>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  {group.dates.map((d) => (
+                    <div key={d} className="bg-card rounded-2xl p-4 border border-sand flex items-center gap-3">
+                      <Icon name="CalendarDays" size={18} className="text-coral shrink-0" />
+                      <span className="font-display text-xl font-semibold">{d}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
+          <p className="text-muted-foreground text-sm mt-6">¹ Праздничные дни. Стоимость программы в эти даты может отличаться.</p>
         </div>
       </section>
 
       <footer className="px-6 md:px-16 py-20 bg-ink text-background print-page">
         <div className="max-w-5xl mx-auto">
           <span className="text-sunset font-semibold uppercase tracking-[0.25em] text-xs">Свяжитесь с нами</span>
-          <h2 className="font-display text-4xl md:text-6xl font-semibold mt-2 mb-10">Wanderlust Travel</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <h2 className="font-display text-4xl md:text-6xl font-semibold mt-2 mb-10">Моя Сибирь</h2>
+          <div className="grid md:grid-cols-2 gap-8">
             {[
-              ['Phone', 'Телефон', '+7 (495) 123-45-67'],
-              ['Mail', 'Почта', 'hello@wanderlust.ru'],
-              ['MapPin', 'Офис', 'Москва, ул. Тверская, 12'],
+              ['Phone', 'Телефон / WhatsApp', '+7 917 831 61 06'],
+              ['Globe', 'Сайт', 'mysiberiatour.ru'],
             ].map(([ic, label, val]) => (
               <div key={label}>
                 <Icon name={ic} size={26} className="text-sunset mb-3" />
@@ -386,7 +403,7 @@ const Index = () => {
             ))}
           </div>
           <div className="mt-12 pt-8 border-t border-background/15 text-background/50 text-sm">
-            © 2026 Wanderlust Travel · Программа тура «Альпийские озёра»
+            © 2026 Моя Сибирь · Программа тура «Жемчужины Китая»
           </div>
         </div>
       </footer>
